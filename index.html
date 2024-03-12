@@ -19,6 +19,7 @@
     <header class="header-container">
         <div class="header-top">
             <div class="spacer-container grid-item"><!--spacer--></div>
+            <div class="logo-container grid-item"><img src="images/logo.png" alt="BBQ Menu" class="logo"></div>
             <div class="title-container grid-item"><h1 class="title">Texas Style BBQ, Cajun, & American Eats</h1></div>
             <div class="button-container grid-item"><button class="nav-button" onclick="toggleNav()"></button></div>
             <div class="button-container2 grid-item"><button class="close-button" onclick="toggleNav()"></button></div>
@@ -80,7 +81,7 @@
     </div>
 
     <div id="fullMenuModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
+        <button class="close-button2" onclick="closeModal()"></button>
         <img id="fullMenuImage" class="modal-content" alt="Full Menu">
     </div>
 
