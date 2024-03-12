@@ -385,6 +385,7 @@ iframe {
     .content {
         top: 153px;
         height: calc(95vh - 153px);
+        font-size: 2vh;
     }
 }
 
