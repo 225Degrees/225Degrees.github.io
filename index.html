@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Food, Food Truck, Catering, Texas, BBQ, Cajun, American, Eats, Grill, 225 Degrees, Meat, Meat Market">
+    <meta name="description" content="Food truck/catering serving Texas style BBQ, Cajun, & American eats.">
+    <title>225 Degrees</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6018a834ff.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header-container">
+        <div class="header-top">
+            <div class="spacer-container grid-item"><!--spacer--></div>
+            <div class="title-container grid-item"><h1 class="title">Texas Style BBQ, Cajun, & American Eats</h1></div>
+            <div class="button-container grid-item"><button class="nav-button" onclick="toggleNav()"></button></div>
+            <div class="button-container2 grid-item"><button class="close-button" onclick="toggleNav()"></button></div>
+            <div class="socials-container grid-item">
+                <ul class="socials">
+                    <li><a href="https://www.facebook.com/225Degrees" target="_blank"><i class="fa-brands fa-square-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/225Degrees" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="primary-nav">
+            <a class="grid-item" href="#about" onclick="showDiv('aboutDiv')">About Us</a>
+            <span class="nav-separator grid-item">|</span>
+            <a class="grid-item" href="#menu" onclick="showDiv('menuDiv')">Menu</a>
+            <span class="nav-separator grid-item">|</span>
+            <a class="grid-item" href="#contact" onclick="showDiv('contactDiv')">Contact</a>
+            <span class="nav-separator grid-item">|</span>
+            <a class="grid-item" href="#schedule" onclick="showDiv('scheduleDiv')">Schedule</a>
+            <a class="grid-item nav-socials" href="https://www.facebook.com/225Degrees" target="_blank">Facebook</a>
+            <a class="grid-item nav-socials" href="https://www.instagram.com/225Degrees" target="_blank">Instagram</a>
+        </nav>
+    </header>
+
+    <div id="aboutDiv" class="content column-div">
+        <h2>About Us</h2>
+        <p>Welcome to 225 Degrees, where the flavors of Southeast Texas meet the heart of North Carolina! Our journey began where the sizzle of Texas-style BBQ and the zesty Cajun spices danced in the air. Packed with passion and a hint of wanderlust, we embarked on a road trip to bring the bold, mouthwatering tastes of the Gulf Coast to the East.</p>
+
+        <p>As the wheels turned and the landscape changed, so did our menu – a harmonious blend of Texas BBQ, Cajun delights, and classic American comfort food. Picture smoky briskets slow-cooked to perfection, finger-lickin' good ribs, and Cajun classics that'll transport you straight to the bayous.</p>
+        
+        <p>So, whether you're a Texan at heart, a North Carolinian by residence, or simply a lover of good food and good times, join us on this flavor-packed journey. We're not just serving up meals; we're sharing a taste of our roots, one plate at a time. Welcome to the crossroads of Texas BBQ, Cajun spice, and the warm embrace of North Carolina – welcome to 225 Degrees. Let's eat, y'all! </p>
+    </div>
+
+    <div id="menuDiv" class="content row-div">
+        <div class="child-div">
+            <h2>BBQ</h2>
+            <img src="images/bbqmenu.png" alt="BBQ Menu" class="menu-preview" onclick="openModal('images/menu1.jpg')">
+        </div>
+        <div class="child-div">
+            <h2>Cajun</h2>
+            <img src="images/cajunmenu.png" alt="Cajun Menu" class="menu-preview" onclick="openModal('images/menu2.jpg')">
+        </div>
+        <div class="child-div">
+            <h2>Catering</h2>
+            <img src="images/cateringmenu.png" alt="Catering Menu" class="menu-preview" onclick="openModal('images/menu3.jpg')">
+        </div>
+    </div>
+
+    <div id="contactDiv" class="content column-div">
+        <h2>Contact Us</h2>
+        <p>Have questions or want to book our food truck for an event? Reach out to us!</p>
+        <p>Business E-mail: 225meats@gmail.com</p>
+        <p>Phone: (828)414-0003</p>
+    </div>
+
+    <div id="scheduleDiv" class="content column-div">
+        <h2>Schedule</h2>
+        <p>Here is a calendar with our booked events / times / locations.</p>
+        <iframe src="https://calendar.google.com/calendar/embed?src=e492e1384aa07f21c919335d01348b01a4e2ff87f00faaa3404f82850a6a5c37%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" frameborder="0" scrolling="no"></iframe>
+    </div>
+
+    <div id="fullMenuModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="fullMenuImage" class="modal-content" alt="Full Menu">
+    </div>
+
+    <footer class="bottom">
+        <p>&copy; 2024 225 Degrees - Food Truck & Catering</p>
+    </footer>
+</body>
+</html>
