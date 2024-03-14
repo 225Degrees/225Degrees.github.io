@@ -497,12 +497,10 @@ iframe {
         background-color: #0f0f0ffb;
         transition: transform 0.5s ease;
         transform: translateX(100%);
-        font-size: 5vh;
+        font-size: 4vh;
         flex-wrap: wrap;
-    }
-
-    nav a {
-        flex-basis: 40%;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
     }
 
     .logo-container {
