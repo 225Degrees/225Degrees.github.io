@@ -31,19 +31,19 @@
             </div>
         </div>
         <nav class="primary-nav">
-            <a class="grid-item" href="#about" onclick="showDiv('aboutDiv')">About Us</a>
+            <a class="grid-item" href="#about" onclick="navigate('about', event)">About Us</a>
             <span class="nav-separator grid-item">|</span>
-            <a class="grid-item" href="#menu" onclick="showDiv('menuDiv')">Menu</a>
+            <a class="grid-item" href="#menu" onclick="navigate('menu', event)">Menu</a>
             <span class="nav-separator grid-item">|</span>
-            <a class="grid-item" href="#contact" onclick="showDiv('contactDiv')">Contact</a>
+            <a class="grid-item" href="#contact" onclick="navigate('contact', event)">Contact</a>
             <span class="nav-separator grid-item">|</span>
-            <a class="grid-item" href="#schedule" onclick="showDiv('scheduleDiv')">Schedule</a>
+            <a class="grid-item" href="#schedule" onclick="navigate('schedule', event)">Schedule</a>
             <a class="grid-item nav-socials" href="https://www.facebook.com/225Degrees" target="_blank">Facebook</a>
             <a class="grid-item nav-socials" href="https://www.instagram.com/225Degrees" target="_blank">Instagram</a>
         </nav>
     </header>
 
-    <div id="aboutDiv" class="content column-div">
+    <div id="about" class="content column-div">
         <h2>About Us</h2>
         <p>Welcome to 225 Degrees, where the flavors of Southeast Texas meet the heart of North Carolina! Our journey began where the sizzle of Texas-style BBQ and the zesty Cajun spices danced in the air. Packed with passion and a hint of wanderlust, we embarked on a road trip to bring the bold, mouthwatering tastes of the Gulf Coast to the East.</p>
 
@@ -52,7 +52,7 @@
         <p>So, whether you're a Texan at heart, a North Carolinian by residence, or simply a lover of good food and good times, join us on this flavor-packed journey. We're not just serving up meals; we're sharing a taste of our roots, one plate at a time. Welcome to the crossroads of Texas BBQ, Cajun spice, and the warm embrace of North Carolina – welcome to 225 Degrees. Let's eat, y'all! </p>
     </div>
 
-    <div id="menuDiv" class="content row-div">
+    <div id="menu" class="content row-div">
         <div class="child-div">
             <h2>BBQ</h2>
             <img src="images/bbqmenu.png" alt="BBQ Menu" class="menu-preview" onclick="openModal('images/bbqmenu.png')">
@@ -67,14 +67,14 @@
         </div>
     </div>
 
-    <div id="contactDiv" class="content column-div">
+    <div id="contact" class="content column-div">
         <h2>Contact Us</h2>
         <p>Have questions or want to book our food truck for an event? Reach out to us!</p>
         <p>Business E-mail: 225meats@gmail.com</p>
         <p>Phone: (828)414-0003</p>
     </div>
 
-    <div id="scheduleDiv" class="content column-div">
+    <div id="schedule" class="content column-div">
         <h2>Schedule</h2>
         <p>Here is a calendar with our booked events / times / locations.</p>
         <iframe src="https://calendar.google.com/calendar/embed?src=e492e1384aa07f21c919335d01348b01a4e2ff87f00faaa3404f82850a6a5c37%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" frameborder="0" scrolling="no"></iframe>

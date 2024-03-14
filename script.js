@@ -3,17 +3,16 @@ var nav;
 var navContainer;
 var closeContainer;
 
+// Actions needed to be performed at initial loading of the website
 document.addEventListener('DOMContentLoaded', function () {
-    // Set the initial visibility
-    showDiv('aboutDiv');
+    showDiv('about');
     nav = document.querySelector('.primary-nav');
     navContainer = document.querySelector('.button-container');
     closeContainer = document.querySelector('.button-container2');
-    console.log(nav.style.display);
 });
 
+// Makes sure that the navigation correctly transitions between mobile navigation and normal navigation
 window.addEventListener('resize', handleResize);
-
 function handleResize() {
     var windowWidth = window.innerWidth;
 
@@ -29,6 +28,7 @@ function handleResize() {
     }
 }
 
+// Handles sliding the mobile navigation on and off the screen
 function toggleNav() {
     if(navState) {
         nav.style.transform = 'translateX(0%)';
@@ -42,6 +42,7 @@ function toggleNav() {
     navState = !navState;
 }
 
+// Handles hiding and show of the content divs
 function showDiv(divId) {
     // Hide all divs
     var divs = document.getElementsByClassName('content');
@@ -59,6 +60,7 @@ function showDiv(divId) {
     }
 }
 
+// Handles showing the modal for the menus
 function openModal(menuSrc) {
     var modal = document.getElementById('fullMenuModal');
     var modalImg = document.getElementById('fullMenuImage');
@@ -66,14 +68,34 @@ function openModal(menuSrc) {
     modalImg.src = menuSrc;
 }
 
+// Handles hiding the modal for menus when clicking the close button on modal
 function closeModal() {
     var modal = document.getElementById('fullMenuModal');
     modal.style.display = 'none';
 }
 
+// Handles hiding the modal for menus when clicking outside of the menu img
 window.onclick = function(event) {
     var modal = document.getElementById('fullMenuModal');
     if (event.target === modal) {
         closeModal();
     }
 };
+
+// Helps the browser know to display different content when hitting the back button
+function navigate(divId, event) {
+    event.preventDefault();
+    showDiv(divId);
+
+    // Push the current state to the browser history
+    history.pushState({ divId: divId }, "", `#${divId}`);
+}
+
+// Helps the browser return to previous content when hitting back button
+window.addEventListener("popstate", function (event) {
+    if (event.state && event.state.divId) {
+        showDiv(event.state.divId);
+    } else {
+        showDiv('about');
+    }
+});

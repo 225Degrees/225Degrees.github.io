@@ -44,7 +44,7 @@ body {
     align-items: center;
     display: none;
     z-index: 2;
-    font-size: calc(0.85vw + 0.85vh);
+    font-size: calc(0.9vw + 0.9vh);
     line-height: 1.4;
     padding-bottom: 8vh;
     text-shadow: 2px 2px 5px rgb(0, 0, 0.5);
@@ -498,6 +498,11 @@ iframe {
         transition: transform 0.5s ease;
         transform: translateX(100%);
         font-size: 5vh;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        flex-basis: 40%;
     }
 
     .logo-container {
